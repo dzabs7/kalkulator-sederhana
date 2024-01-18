@@ -1,0 +1,98 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+     
+  }
+   
+   
+  .container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  }
+   
+  .container .calculator {
+    position: relative;
+    display: grid;
+  }
+   
+  .container .calculator .value {
+    grid-column: span 4;
+    height: 140px;
+    width: 360px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 40px;
+    background: transparent;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+  }
+   
+  .container .calculator span {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 75px;
+    width: 90px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.5s;
+  }
+   
+  .container .calculator span:hover {
+    transition: 0s;
+    background: rgba(255, 255, 255, 0.05);
+  }
+   
+  .container .calculator span:active {
+    background: #14ff47;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+  }
+   
+  .container .calculator .clear {
+    grid-column: span 2;
+    width: 180px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+   
+  .container .calculator .plus {
+    grid-row: span 2;
+    height: 150px;
+  }
+   
+  .equal {
+    background: #d35400;
+    width: 180px;
+  }
+   
+  @media (max-width: 768px) {
+    body::before {
+      max-width: 75vw;
+      max-height: 75vh;
+    }
+     
+  }
